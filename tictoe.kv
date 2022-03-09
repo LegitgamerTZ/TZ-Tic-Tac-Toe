@@ -1,0 +1,182 @@
+tictac:
+	
+	screen_mngr: screen_mngr
+	
+	ScreenManager:
+		id: screen_mngr
+		home: home
+		#first: first
+		
+		Screen:
+			id: home
+			name: 'home'
+			first: first
+			second: second
+			third: third
+			fourth: fourth
+			fifth: fifth
+			sixth: sixth
+			seventh: seventh
+			eighth: eighth
+			ninth: ninth
+			lebel: lebel
+			
+			#UPPER
+	
+			MDRoundFlatButton:
+				id: first
+				text: ' '
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.02, "top":0.8}
+				font_size: 130
+				on_press: root.check1()
+				on_release: root.winner()
+			
+			MDRoundFlatButton:
+				id: second
+				text: " "
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.35, "top":0.8}
+				font_size: 130
+				on_press: root.check2()
+				on_release: root.winner()
+				
+			MDRoundFlatButton:
+				id: third
+				text: " "
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.685, "top":0.8}
+				font_size: 130
+				on_press: root.check3()
+				on_release: root.winner()
+			
+			#MIDDLE
+			
+			MDRoundFlatButton:
+				id: fourth
+				text: " "
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.02, "top":0.64}
+				#pos: (50, 500)
+				font_size: 130
+				on_press: root.check4()
+				on_release: root.winner()
+			
+			MDRoundFlatButton:
+				id: fifth
+				text: " "
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.35, "top":0.64}
+				font_size: 130
+				on_press: root.check5()
+				on_release: root.winner()
+				
+			MDRoundFlatButton:
+				id: sixth
+				text: " "
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.685, "top":0.64}
+				font_size: 130
+				on_press: root.check6()
+				on_release: root.winner()
+			
+			#LOWER
+			
+			MDRoundFlatButton:
+				id: seventh
+				text: " "
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.02, "top":0.48}
+				#pos: (50, 500)
+				font_size: 130
+				on_press: root.check7()
+				on_release: root.winner()
+			
+			MDRoundFlatButton:
+				id: eighth
+				text: " "
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.35, "top":0.48}
+				font_size: 130
+				on_press: root.check8()
+				on_release: root.winner()
+				
+			MDRoundFlatButton:
+				id: ninth
+				text: " "
+				size_hint: 0.3, 0.15
+				pos_hint: {"x": 0.685, "top":0.48}
+				font_size: 130
+				on_press: root.check9()
+				on_release: root.winner()
+			
+			MDLabel:
+				id: lebel
+				text: "Player : O"
+				font_name: 'font'
+				theme_text_color: "Custom"
+				text_color: 1,0,0,1
+				pos_hint: {"x": 0.35, "top": 0.7}
+				font_size: 60
+			
+			MDRoundFlatButton:
+				id: reset_btn
+				text: "New Game"
+				font_name: 'font'
+				size_hint: 0.3, 0.1
+				pos_hint: {"x": 0.685, "top":0.15}
+				font_size: 34
+				on_press: root.reset()
+			
+			MDToolbar:
+				id: 5
+				title: 'TZ Tic Tac Toe'
+				font_name: 'font'
+				left_action_items: [["menu"]]
+				elevation: 8
+				pos_hint: {"x":0, 'top': 1}
+			
+			
+			MDNavigationDrawer:
+				id: nav_drawer
+				
+				BoxLayout:
+					orientation: 'vertical'
+					spacing: 0
+					padding: 0
+					
+					Image:
+						source: '/storage/emulated/0/python/profile_4.jpg'
+						size_hint_y: None
+					#	height: self.texture_size[1]
+						padding: 0
+						
+				
+					
+					MDRoundFlatButton:
+						id: reset_btn
+						text: "Dark Theme"
+						font_name: 'font'
+						size_hint: 1, 0.1
+						pos_hint: {"x": 0, "top":0}
+						font_size: 34
+						on_press: self.theme_cls.theme_style = "Dark"
+					
+					MDRoundFlatButton:
+						id: reset_btn
+						text: "Light Theme"
+						font_name: 'font'
+						size_hint: 1, 0.1
+						pos_hint: {"x": 0, "top":0}
+						font_size: 34
+						on_press: self.theme_cls.theme_style = "Light"
+					
+					ScrollView:
+					
+					
+					
+					
+					
+					
+					
+			
